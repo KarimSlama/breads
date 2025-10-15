@@ -53,6 +53,7 @@ ThemeData themeLight = ThemeData(
       backgroundColor: AppColors.primary,
       foregroundColor: AppColors.white,
       textStyle: GoogleFonts.poppins(
+        color: AppColors.white,
         fontSize: 16.sp,
         fontWeight: FontWeight.w600,
       ),

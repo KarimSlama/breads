@@ -54,13 +54,14 @@ ThemeData themeDark = ThemeData(
       foregroundColor: AppColors.white,
       textStyle: GoogleFonts.poppins(
         fontSize: 16.sp,
+        color: AppColors.white,
         fontWeight: FontWeight.w600,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30.r),
       ),
-      elevation: 0,
-      padding: EdgeInsets.symmetric(horizontal: 24.r, vertical: 14.r),
+      elevation: 1,
+      padding: EdgeInsets.symmetric(horizontal: 24.r, vertical: 24.r),
     ),
   ),
 

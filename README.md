@@ -194,7 +194,7 @@ flutter test integration_test
 
 ## 👨‍💻 Author
 
-**Karim Slama**
+[![Contributors](https://contrib.rocks/image?repo=KarimSlama/testing_all_widgets_flutter)](https://github.com/KarimSlama/testing_all_widgets_flutter/graphs/contributors) **Karim Slama**
 
-- GitHub: [@yourusername](https://github.com/KarimSlama)
-- LinkedIn: [Your Name](https://linkedin.com/in/karim-slama-)
+- GitHub: [@Karim Slama](https://github.com/KarimSlama)
+- LinkedIn: [Karim Slama](https://linkedin.com/in/karim-slama-)
