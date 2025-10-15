@@ -1,0 +1,73 @@
+name: breads
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+   # State Management
+  flutter_bloc: ^9.1.1
+  # For Dependency Injection
+  get_it: ^8.2.0
+  # Automatically generate code for converting to and from JSON by annotating Dart classes.
+  json_serializable: ^6.7.1
+  # Annotations for the JSON code-generator.
+  json_annotation: ^4.9.0
+  # A powerful HTTP networking package, supports Interceptors, Aborting and canceling a request, Custom adapters, Transformers, etc.
+  dio: ^5.5.0+1
+  # Pretty Dio logger is a Dio interceptor that logs network calls in a pretty, easy to read format.
+  pretty_dio_logger: ^1.4.0
+  # retrofit.dart is an dio client generator using source_gen and inspired by Chopper and Retrofit.
+  retrofit: ^4.0.3
+  # Retrofit generator is an dio client generator using source_gen and inspired by Chopper and Retrofit.
+  retrofit_generator: ^9.1.2
+  # A build system for Dart code generation and modular compilation.
+  build_runner: ^2.4.7
+  # Reading and Writing simple key-value pairs.
+  shared_preferences: ^2.3.2
+  # A package provides an easy way to add shimmer effect in Flutter project
+  shimmer: ^3.0.0
+  # A package which simplifies the task of updating your Flutter app's launcher icon.
+  flutter_launcher_icons: ^0.14.4
+
+  flutter_gen_runner: ^5.10.0
+
+  intl:
+
+  # Splash Screen
+  flutter_native_splash: ^2.3.5
+
+  flutter_screenutil: ^5.9.3
+  iconsax_flutter: ^1.0.1
+
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+
+flutter_icons:
+  image_path_android: "assets/images/logo.png"
+  image_path_ios: "assets/images/logo.png"
+  android: true
+  ios: true
+
+flutter:
+
+  uses-material-design: true
+
+
+assets:
+    - assets/icons/
+    - assets/images/
