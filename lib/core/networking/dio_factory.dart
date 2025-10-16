@@ -24,6 +24,8 @@ class DioFactory {
   static void addDioHeaders() async {
     dio?.options.headers = {
       'Accept': '*/*',
+      'api_key':
+          'live_e6CGRanwkE5k4R4ck0QEBrNLMlVdRVteX4qT6B9SY0o16SvvSFBTMPSA0ES9c0Hu',
     };
   }
 

@@ -6,4 +6,6 @@ class AppStrings {
       joinDiscoverTheBestSuitablePetsAsPerYourPreferencesInYourLocation =
       'Join & discover the best suitable pets as per your preferences in your location';
   static const String getStarted = 'Get Started';
+
+  static const String seeAll = 'See all';
 }
