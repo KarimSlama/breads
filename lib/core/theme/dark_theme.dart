@@ -21,6 +21,8 @@ ThemeData themeDark = ThemeData(
   ),
   appBarTheme: AppBarTheme(
     backgroundColor: AppColors.black,
+    surfaceTintColor: Colors.transparent,
+    scrolledUnderElevation: 0,
     elevation: 0.0,
     titleTextStyle: GoogleFonts.poppins(
       color: AppColors.white,

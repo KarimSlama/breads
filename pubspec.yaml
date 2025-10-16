@@ -37,8 +37,14 @@ dependencies:
   shimmer: ^3.0.0
   # A package which simplifies the task of updating your Flutter app's launcher icon.
   flutter_launcher_icons: ^0.14.4
+  # RxDart is an implementation of the popular ReactiveX api for asynchronous programming, leveraging the native Dart Streams api.
+  rxdart: ^0.28.0
+
+  infinite_scroll_pagination: ^4.0.0
 
   flutter_gen_runner: ^5.3.0
+
+  animate_do: ^4.2.0
 
   intl:
 

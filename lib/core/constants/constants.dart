@@ -1,5 +1,3 @@
-bool isLoggedUser = false;
-
 class Constants {
-  static String userKey = "USER_KEY";
+  static const String FAVORITES_KEY = 'FAVORITES_KEY';
 }
