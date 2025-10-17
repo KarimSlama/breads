@@ -1,7 +1,7 @@
-import 'package:breads/breads/home/widgets/categories_tabs_list.dart';
+import 'package:breads/core/common/widgets/tabs/categories_tabs_list.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../core/helper/helper.dart';
+import '../../../helper/helper.dart';
 
 void main() {
   testWidgets('CategoriesTabsList renders and toggles selection',

@@ -49,4 +49,10 @@ class AppStrings {
   static const String profileScreen = 'Profile Screen';
   static const String profileDescription =
       'Your profile information will appear here';
+
+  // Pet Details
+  static const String intelligence = 'Intelligence';
+  static const String lifeSpan = 'Life Span';
+  static const String weight = 'Weight';
+  static const String about = 'About:';
 }

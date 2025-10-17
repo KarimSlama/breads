@@ -1,4 +1,5 @@
 import 'package:breads/breads/favorites/controller/favorites_cubit.dart';
+import 'package:breads/breads/home/data/model/pet_model_response.dart';
 import 'package:breads/breads/search/controller/search_bloc.dart';
 import 'package:breads/core/service_locator/dependency_injections.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../breads/navigation_menu/main_navigation_menu_layout.dart';
 import '../../breads/onboarding/onboarding_screen.dart';
+import '../../breads/pet_details/pet_details_screen.dart';
 import '../../breads/search/search_screen.dart';
 import 'routes.dart';
 
@@ -33,6 +35,15 @@ class AppRouter {
               ),
             ],
             child: SearchScreen(),
+          ),
+        );
+
+      case Routes.petDetialsScreen:
+        final pets = settings.arguments as PetModelResponse;
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider.value(
+            value: getIt<FavoritesCubit>(),
+            child: PetDetailsScreen(pets: pets),
           ),
         );
 

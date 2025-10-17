@@ -40,7 +40,8 @@ class FavoritesScreen extends StatelessWidget {
                           FadeIn(
                               curve: Curves.bounceInOut,
                               child: Lottie.asset(Assets.animations.emptyFile)),
-                          const Center(child: Text(AppStrings.favoritesDescription)),
+                          const Center(
+                              child: Text(AppStrings.favoritesDescription)),
                         ],
                       );
                     }

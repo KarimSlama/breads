@@ -7,20 +7,20 @@ import '../../../constants/app_colors.dart';
 
 class PetImage extends StatelessWidget {
   final String image;
-  final double width, height;
-  const PetImage({
-    super.key,
-    required this.image,
-    this.width = 115,
-    this.height = 115,
-  });
+  final double width, height, padding;
+  const PetImage(
+      {super.key,
+      required this.image,
+      this.width = 115,
+      this.height = 115,
+      this.padding = 8});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
       height: height,
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
           color: AppColors.secondary, borderRadius: BorderRadius.circular(8.r)),
       child: FadeIn(

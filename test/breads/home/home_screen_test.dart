@@ -4,7 +4,7 @@ import 'package:breads/breads/favorites/controller/favorites_cubit.dart';
 import 'package:breads/breads/home/controller/home_cubit.dart';
 import 'package:breads/breads/home/data/model/pet_model_response.dart';
 import 'package:breads/breads/home/home_screen.dart';
-import 'package:breads/breads/home/widgets/categories_tabs_list.dart';
+import 'package:breads/core/common/widgets/tabs/categories_tabs_list.dart';
 import 'package:breads/breads/home/widgets/pet_card.dart';
 import 'package:breads/breads/home/widgets/pets_list.dart';
 import 'package:breads/breads/home/widgets/search_bar_widget.dart';
