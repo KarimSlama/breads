@@ -1,7 +1,7 @@
-import 'package:breads/breads/home/widgets/category_tab.dart';
+import 'package:breads/core/common/widgets/tabs/category_tab.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../core/helper/helper.dart';
+import '../../../helper/helper.dart';
 
 void main() {
   testWidgets('CategoryTab renders selected/unselected styles and taps',

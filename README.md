@@ -66,7 +66,7 @@ Breads App is a responsive mobile application that provides users with detailed 
 - **State Management**: BLoC
 - **Networking**: Dio + Retrofit
 - **Dependency Injection**: getIt
-- **Testing**: Flutter Test, Mockito
+- **Testing**: Flutter Test, Mocktail, bloc_test
 - **Code Generation**: Build Runner, Json Serializable, Injectable
 
 ## Project Structure
@@ -76,18 +76,91 @@ Breads App is a responsive mobile application that provides users with detailed 
 breads
 ├─ assets
 │  ├─ icons
+   ├─ animations
+      └─ empty-file.json
 │  └─ images
 │     └─ logo.png
 ├─ flutter_native_splash.yaml
 ├─ lib
 │  ├─ breads
-│  │  └─ onboarding
-│  │     └─ onboarding_screen.dart
+│  │  ├─ favorites
+│  │  │  ├─ controller
+│  │  │  │  ├─ favorites_cubit.dart
+│  │  │  │  └─ favorites_state.dart
+│  │  │  ├─ data
+│  │  │  │  └─ model
+│  │  │  │     └─ favorite_pet.dart
+│  │  │  ├─ favorites_screen.dart
+│  │  │  └─ widgets
+│  │  │     └─ grid_card_fav_pet.dart
+│  │  ├─ home
+│  │  │  ├─ controller
+│  │  │  │  ├─ home_cubit.dart
+│  │  │  │  └─ home_state.dart
+│  │  │  ├─ data
+│  │  │  │  ├─ model
+│  │  │  │  │  ├─ pet_model_response.dart
+│  │  │  │  │  └─ pet_model_response.g.dart
+│  │  │  │  ├─ network
+│  │  │  │  │  ├─ pet_constants.dart
+│  │  │  │  │  ├─ pet_service.dart
+│  │  │  │  │  └─ pet_service.g.dart
+│  │  │  │  └─ repository
+│  │  │  │     └─ pets_repository.dart
+│  │  │  ├─ home_screen.dart
+│  │  │  └─ widgets
+│  │  │     ├─ no_pets_items_found.dart
+│  │  │     ├─ pets_list.dart
+│  │  │     ├─ pet_card.dart
+│  │  │     └─ search_bar_widget.dart
+│  │  ├─ messages
+│  │  │  └─ messages_screen.dart
+│  │  ├─ navigation_menu
+│  │  │  ├─ controller
+│  │  │  │  └─ navigation_cubit.dart
+│  │  │  ├─ main_navigation_menu_layout.dart
+│  │  │  └─ navigation_menu.dart
+│  │  ├─ onboarding
+│  │  │  └─ onboarding_screen.dart
+│  │  ├─ pet_details
+│  │  │  ├─ pet_details_screen.dart
+│  │  │  └─ widgets
+│  │  │     └─ pets_facilitations.dart
+│  │  ├─ profile
+│  │  │  └─ profile_screen.dart
+│  │  └─ search
+│  │     ├─ controller
+│  │     │  ├─ search_bloc.dart
+│  │     │  ├─ search_event.dart
+│  │     │  └─ search_state.dart
+│  │     ├─ data
+│  │     │  ├─ network
+│  │     │  │  ├─ search_service.dart
+│  │     │  │  └─ search_service.g.dart
+│  │     │  └─ repository
+│  │     │     └─ search_repository.dart
+│  │     └─ search_screen.dart
 │  ├─ breads_app.dart
 │  ├─ core
 │  │  ├─ common
 │  │  │  ├─ local
 │  │  │  └─ widgets
+│  │  │     ├─ icons
+│  │  │     │  └─ favorite_icon.dart
+│  │  │     ├─ images
+│  │  │     │  └─ pet_image.dart
+│  │  │     ├─ layouts
+│  │  │     │  ├─ custom_pets_list_of_cards.dart
+│  │  │     │  └─ grid_view_layout.dart
+│  │  │     ├─ loading
+│  │  │     │  ├─ pet_card_shimmer_loading.dart
+│  │  │     │  └─ shimmer_loading.dart
+│  │  │     ├─ tabs
+│  │  │     │  ├─ categories_tabs_list.dart
+│  │  │     │  └─ category_tab.dart
+│  │  │     └─ texts
+│  │  │        ├─ location_icon_with_km.dart
+│  │  │        └─ section_heading.dart
 │  │  ├─ constants
 │  │  │  ├─ app_colors.dart
 │  │  │  ├─ app_strings.dart
@@ -116,10 +189,40 @@ breads
 │  │     ├─ dark_theme.dart
 │  │     └─ light_theme.dart
 │  ├─ gen
+│  │  └─ assets.gen.dart
 │  └─ main.dart
 ├─ pubspec.lock
 ├─ pubspec.yaml
 ├─ README.md
+├─ test
+│  ├─ breads
+│  │  ├─ breads
+│  │  ├─ core
+│  │  │  ├─ common
+│  │  │  │  └─ widgets
+│  │  │  │     ├─ icons
+│  │  │  │     │  └─ favorite_icon_test.dart
+│  │  │  │     ├─ tabs
+│  │  │  │     │  ├─ categories_tabs_list_test.dart
+│  │  │  │     │  └─ category_tab_test.dart
+│  │  │  │     └─ texts
+│  │  │  │        └─ section_heading_test.dart
+│  │  │  └─ helper
+│  │  │     ├─ helper.dart
+│  │  │     └─ test_helper.dart
+│  │  └─ home
+│  │     ├─ controller
+│  │     │  └─ home_cubit_test.dart
+│  │     ├─ data
+│  │     │  └─ repository
+│  │     │     └─ pets_repository_test.dart
+│  │     ├─ home_screen_test.dart
+│  │     └─ widgets
+│  │        ├─ no_pets_and_shimmer_smoke_test.dart
+│  │        ├─ no_pets_items_found_test.dart
+│  │        ├─ pets_list_test.dart
+│  │        ├─ pet_card_test.dart
+│  │        └─ search_bar_widget_test.dart
 
 ```
 
@@ -191,6 +294,7 @@ flutter test integration_test
 ```
 
 ## Screenshots
+
 
 ## 👨‍💻 Author
 

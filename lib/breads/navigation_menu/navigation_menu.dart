@@ -25,9 +25,7 @@ class NavigationMenu extends StatelessWidget {
         ),
         child: Container(
           height: 80.h,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-          ),
+          decoration: const BoxDecoration(),
           child: BlocBuilder<NavigationCubit, NavigationItem>(
             builder: (context, currentIndex) {
               return Row(

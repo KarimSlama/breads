@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/common/widgets/icons/favorite_icon.dart';
 import '../../../core/common/widgets/texts/location_icon_with_km.dart';
 import '../../../core/constants/app_colors.dart';
+import '../../../core/routing/routes.dart';
 
 class PetCard extends StatelessWidget {
   final PetModelResponse pets;
@@ -22,7 +23,7 @@ class PetCard extends StatelessWidget {
     final imageUrl = pets.referenceImageId.toImageUrl();
     return InkWell(
       borderRadius: BorderRadius.circular(16.r),
-      onTap: () {},
+      onTap: () => context.pushNamed(Routes.petDetialsScreen, arguments: pets),
       child: FadeIn(
         animate: true,
         curve: Curves.bounceInOut,
@@ -52,13 +53,12 @@ class PetCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              PetImage(image: imageUrl),
+              Hero(tag: pets.id, child: PetImage(image: imageUrl)),
               Column(
                 spacing: 7.h,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(pets.name,
-                      style: Theme.of(context).textTheme.titleSmall),
+                  Text(pets.name),
                   Text('Female', style: Theme.of(context).textTheme.bodySmall),
                   Text('${pets.ageRange} Months old',
                       style: Theme.of(context).textTheme.bodySmall),

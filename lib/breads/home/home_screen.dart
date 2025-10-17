@@ -5,7 +5,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../core/common/widgets/texts/section_heading.dart';
 import '../../core/routing/routes.dart';
-import 'widgets/categories_tabs_list.dart';
+import '../../core/common/widgets/tabs/categories_tabs_list.dart';
 import 'widgets/pets_list.dart';
 import 'widgets/search_bar_widget.dart';
 
