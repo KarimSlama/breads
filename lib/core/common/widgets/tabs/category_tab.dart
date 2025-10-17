@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/constants/app_colors.dart';
+import '../../../constants/app_colors.dart';
+import '../../../helper/helper_functions.dart';
 
 class CategoryTab extends StatelessWidget {
   final String label;
@@ -26,7 +27,11 @@ class CategoryTab extends StatelessWidget {
         ),
         margin: EdgeInsetsDirectional.only(end: 10),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.primary : AppColors.light,
+          color: isSelected
+              ? AppColors.primary
+              : AppHelperFunctions.isDark(context)
+                  ? AppColors.darkGrey
+                  : AppColors.white,
           borderRadius: BorderRadius.circular(80.r),
         ),
         child: Center(
