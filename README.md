@@ -294,6 +294,8 @@ flutter test integration_test
 ```
 
 ## Screenshots
+<img width="5604" height="3600" alt="Mock Up" src="https://github.com/user-attachments/assets/bb7be77c-4002-43bc-aa44-8982a06b5307" />
+
 
 
 ## 👨‍💻 Author
